@@ -1,0 +1,45 @@
+<h1 class="font-weight-normal"><u>Movie Details:</u></h1>
+<div>
+    <img src="{{movies.poster}}" class="moviePoster rounded float-left" alt="movie-poster">
+    <h2 class="font-weight-bold">{{movies.title}}</h2>
+    <h3 class="font-weight-normal">Director:</h3>
+    <div>{{movies.director}}</div>
+    <h3 class="font-weight-normal">Duration:</h3>
+    <div class="d-flex p-2">{{movies.duration}}<p>mins</p>
+    </div>
+    <h3 class="font-weight-normal">Cast:</h3>
+    <div >{{movies.cast}}</div>
+    <h3 class="font-weight-normal">Description:</h3>
+    <div>{{movies.synopsis}}</div>
+    <h3 class="font-weight-normal">Rating: {{movies.rating}}/10</h3>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<h2><u>Music</u><svg width='1em' height='1em' viewBox='0 0 16 16' class='bi bi-music-note' fill='currentColor'
+        xmlns='http://www.w3.org/2000/svg'>
+        <path d='M9 13c0 1.105-1.12 2-2.5 2S4 14.105 4 13s1.12-2 2.5-2 2.5.895 2.5 2z'/>
+        <path fill-rule='evenodd' d='M9 3v10H8V3h1z' />
+        <path d='M8 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 13 2.22V4L8 5V2.82z' />
+    </svg></h3>
+    <br>
+    <div class='row mb-4'>
+        
+        {{#each spotify}}
+        <div class='col-md-3'>
+            <h6 class='hola'>Album:{{album.name}}</h6>
+            <a href='{{album.external_urls.spotify}}''><img class="spotify-img" src='{{album.images.1.url}}' alt='{{name}}''></a>
+            <figure>
+                <audio controls src='{{preview_url}}'></audio>
+            </figure>
+        </div>
+        {{/each}}
+        
+        <a href='/movies/list' class='btn btn-sm btn-dark'>Go back</a>
+    </div>
