@@ -35,11 +35,14 @@ function escapeRegex(text) {
 
 router.post('/details/favorites/:id', (req, res) => {
    const id = req.params.id
-
-   User.findByIdAndUpdate(req.user.id, { $push: { favorites: id } })
-      .then(() => res.redirect('/profile'))
-      .catch(err => console.log('Error', err))
-
+   console.log('holaaaaaaaaa');
+   if (req.user) {
+      User.findByIdAndUpdate(req.user.id, { $push: { favorites: id } })
+         .then(() => res.redirect('/profile'))
+         .catch(err => console.log('Error', err))
+   } else {
+      res.redirect('/login')
+   }
 
 })
 
@@ -55,8 +58,6 @@ router.get('/details/:id', (req, res, next) => {
 
    Promise.all([moviePromise, spotifyPromise])
       .then(results => {
-         console.log(results[1]);
-
          const movies = results[0]
          const spotify = results[1] ? results[1].slice(0, 4) : [""]
          res.render('movies/movies-details', { movies: movies, spotify: spotify, user: req.user })

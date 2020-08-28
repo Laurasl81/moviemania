@@ -8,10 +8,10 @@ const userSchema = new Schema({
     email: {
         type: String,
     },
-    favorites: {
-     type: [Schema.Types.ObjectId], 
-     ref: 'Movie' 
-    },
+    favorites: [{
+        type: [Schema.Types.ObjectId],
+        ref: 'Movie'
+    }],
     imagePath: {
         type: String,
     },

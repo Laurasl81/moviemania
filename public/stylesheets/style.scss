@@ -31,7 +31,7 @@ h1, h2, h3 {
   text-align: center;
 }
 
-.spotify-img {
+.spotify-img{
  
   width: 250px;
   padding: 10px;
@@ -40,44 +40,52 @@ h1, h2, h3 {
 
 audio{
   max-width: 100%;
+}
 
-.moviePoster {
+.moviePoster{
   width: 400px;
   height: 500px;
   padding-right: 50px;
   padding-top: 20px;
 }
 
-.profileImage {
+.profileImage{
   width: 110px;
   height: 110px;
 }
 
-.button {
+.button{
   margin-bottom: 40px;
 }
 
-.profileHead {
+.profileHead{
 padding-top: 25px;
 }
 
-.profileText {
+.profileText{
   padding-bottom: 30px;
 }
 
-.movieSpace {
-  margin-bottom: 50px;
+.movieSpace{
+  img{
+    height: 300px;
+    object-fit: contain;
 }
+  }
 
-.detailsButton {
+  .card{
+    margin-bottom: 1rem;
+  }
+
+.detailsButton{
   margin-top: 20px;
 }
 
-.spotiSpace {
+.spotiSpace{
   margin-left: 10px;
   margin-right: 10px;
 }
 
-.filmIcon {
+.filmIcon{
   margin-right: 10px;
 }

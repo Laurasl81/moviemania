@@ -1,4 +1,3 @@
 # MovieMania
-Project 2 Ironhack WEB &amp; Laura Sanchez
+Project 2 Ironhack WEB MAD Laura Sanchez
 
-h

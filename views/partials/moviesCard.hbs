@@ -1,8 +1,15 @@
-<div class="d-felx col movieSpace">
-        <img class="moviePoster rounded float-left" src={{poster}} alt="poster-image">
-        <div class="d-flex font-weight-bold">{{title}}</div>
-        <div class="d-flex ">{{director}}</div>
-        <br>
-        <div class="d-flex ">{{cast}}</div>
-        <a href="/movies/details/{{_id}}" class="btn btn-sm btn-dark button detailsButton">See details</a>
+<div class="card col-lg-4 col-6 movieSpace">
+    <img class="card-img-top" src={{poster}} alt="poster-image">
+    <div class="card-body">
+        <h5 class="card-title">{{title}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{director}}</h6>
+        <p class="card-text">{{cast}}</p>
+        <div class="d-flex justify-content-around">
+            <a href="/movies/details/{{_id}}" class="btn btn-sm btn-outline-dark">See details</a>
+            <form action="/movies/details/favorites/{{_id}}" method="POST">
+                <button type="submit" class="btn btn-sm btn-outline-success">Add Favorites</button>
+            </form>
+
+        </div>
     </div>
+</div>

@@ -1,42 +1,38 @@
 <div class="rounded float-left profileHead">
-<h2 class="profileText">Welcome, {{username}}!</h2>
-<div class="flex-container">
-    <img class="imagenperfil profileImage" src={{imagePath}} alt={{username}}>
-</div>
-<div>
-    <h2><svg width="2em" height="1.5em" viewBox="0 0 16 16" class="bi bi-heart-fill" fill="red"
-        xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
-    </svg>Your favorite movies:</h2>
+    <h2 class="profileText">Welcome, {{username}}!</h2>
+    <div class="flex-container">
+        <img class="imagenperfil profileImage" src={{imagePath}} alt={{username}}>
+    </div>
+    <div>
+        <h2><svg width="2em" height="1.5em" viewBox="0 0 16 16" class="bi bi-heart-fill" fill="red"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+            </svg>Your favorite movies:</h2>
 
-</div>
-<ol>
-    {{#each favorites}}
-    <li>{{title}}</li>
-    {{/each}}
-</ol>
-<br>
+    </div>
+    <ol>
+        {{#each favorites}}
+        <li>{{title}}</li>
+        {{/each}}
+    </ol>
+    <br>
 
-<form action="/profile/editar/{{_id}}" method="POST" enctype="multipart/form-data">
-    <input type="file" name="imageFile"><br><br>
+    <form action="/profile/editar/{{_id}}" method="POST" enctype="multipart/form-data">
+        <input type="file" name="imageFile"><br><br>
 
-    <label for="">Username:</label>
-    <input type="text" name="username" value={{username}}><br>
-    <label for="">Email:</label>
-    <input type="text" name="email" value={{email}}><br>
-    {{!-- <label for="">Favorites:</label>
+        <label for="">Username:</label>
+        <input type="text" name="username" value={{username}}><br>
+        <label for="">Email:</label>
+        <input type="text" name="email" value={{email}}><br>
+        {{!-- <label for="">Favorites:</label>
     <input type="text" name="favorites" value={{favorites}}><br> --}}
 
-    <button type="submit" class="btn btn-sm btn-success ">Edit profile</button>
-</form>
+        <button type="submit" class="btn btn-sm btn-success ">Edit profile</button>
+    </form>
 </div>
 
-<<<<<<< HEAD
-<br>
-=======
-<br>
 
-<h2>Your favorite movies:</h2>
+{{!-- <h2>Your favorite movies:</h2>
 {{#each user.favourites}}
-{{/each}}
->>>>>>> diego
+{{/each}} --}}

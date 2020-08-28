@@ -23,12 +23,12 @@ const movieSchema = new Schema({
     rating: {
         type: Number
     },
-}, { 
+}, {
     timestamps: true
 })
 
 
 
-const Movie = mongoose.model("Movie", movieSchema)
+const Movie = mongoose.model('Movie', movieSchema)
 
 module.exports = Movie
